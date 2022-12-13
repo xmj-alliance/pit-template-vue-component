@@ -1,5 +1,5 @@
 {
-  "name": "pit-template-vue-component",
+  "name": "@xmj-alliance/pit-template-vue-component",
   "private": false,
   "version": "1.0.0",
   "type": "module",

@@ -21,18 +21,38 @@ pnpm install
 npm run build
 ```
 
+## Publish
+
+1. Create or Edit `~/.npmrc` (Attention: Not the one in this repository!)
+
+   ``` txt
+   //npm.pkg.github.com/:_authToken={YOUR_GIT_REPO_AUTH_TOKEN}
+   ```
+
+2. Edit `.npmrc` in this repository if you are publishing to somewhere else
+
+   ``` txt
+   @xmj-alliance:registry=https://npm.pkg.github.com
+   ```
+
 ## Import this module
+
+Create the `.npmrc` file in the target repository. Change the registry URL if necessary.
+
+```
+@xmj-alliance:registry=https://npm.pkg.github.com
+```
 
 Import the esm (by referencing this module should be enough),
 - **and** the `style.css`
 
 ``` typescript
-import { Dummy } from "pit-template-vue-component";
+import { Dummy } from "@xmj-alliance/pit-template-vue-component";
 ```
 
 ``` scss
 // usually the global style.scss
-@import "~pit-template-vue-component/style.css";
+@import "~@xmj-alliance/pit-template-vue-component/style.css";
 // => or alternatively import in the JS way in main.ts
 ```
 
