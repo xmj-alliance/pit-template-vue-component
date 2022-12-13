@@ -1,0 +1,43 @@
+{
+  "name": "pit-template-vue-component",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/dummy-component.umd.cjs",
+  "module": "./dist/dummy-component.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/dummy-component.js",
+      "require": "./dist/dummy-component.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit --project tsconfig.prod.json && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.13",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/test-utils": "^2.2.6",
+    "@vue/vue3-jest": "^29.2.2",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "sass": "^1.56.2",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.1",
+    "vite-plugin-dts": "^1.7.1",
+    "vue-tsc": "^1.0.11"
+  }
+}
